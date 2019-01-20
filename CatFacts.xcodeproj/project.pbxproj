@@ -66,12 +66,12 @@
 				3D8FA01A21F4C2B900B6ADFC /* LoginViewController.swift */,
 				3D8FA02D21F4CC5300B6ADFC /* RegistrationViewController.swift */,
 				3D8FA02F21F4D1AB00B6ADFC /* ViewControllerExtensions.swift */,
+				3DF8592A21F4F000005491EC /* TextFieldsValidator.swift */,
 				3D8FA01C21F4C2B900B6ADFC /* Main.storyboard */,
 				3D8FA02221F4C2BA00B6ADFC /* Assets.xcassets */,
 				3D8FA02421F4C2BA00B6ADFC /* LaunchScreen.storyboard */,
 				3D8FA02721F4C2BA00B6ADFC /* Info.plist */,
 				3D8FA01F21F4C2B900B6ADFC /* CatFacts.xcdatamodeld */,
-				3DF8592A21F4F000005491EC /* TextFieldsValidator.swift */,
 			);
 			path = CatFacts;
 			sourceTree = "<group>";

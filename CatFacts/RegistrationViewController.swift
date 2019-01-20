@@ -33,5 +33,14 @@ class RegistrationViewController: FormFiewController {
     */
 
     @IBAction func registerButtonPressed(_ sender: UIButton) {
+        let validator = TextFieldsValidator()
+            .validate(with: TextFieldsValidator.validateEmailFormat, for: loginField, named: "Login", on: self)
+            .validate(with: TextFieldsValidator.validatePasswordFormat, for: passwordField, named: "Password", on: self)
+            .validate(with: TextFieldsValidator.validateEqualValues, for: passwordField, and: repeatPasswordField, named: "Password", on: self)
+        
+        if (validator.validationPassed) {
+            // TODO: - Proceed with valid form data
+            print("registration form validation passed")
+        }
     }
 }
