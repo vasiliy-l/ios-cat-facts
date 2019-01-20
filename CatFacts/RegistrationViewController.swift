@@ -13,6 +13,7 @@ class RegistrationViewController: FormFiewController {
     @IBOutlet weak var loginField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var repeatPasswordField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

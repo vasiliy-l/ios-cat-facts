@@ -10,14 +10,96 @@ import Foundation
 import UIKit
 
 /**
- Validation helper to verify field values. Use instances of this class to apply validation rules to fields and display alert message to a user in case of validation failure.
-*/
-class TextFieldsValidator {
+ Validation helper to apply verification rules and display
+ an alert message to a user in case of validation failure.
+ */
+class Validator {
     
     /**
      Tells whether or not all validation rules applied using current object passed.
-    */
-    private(set) public var validationPassed = true
+     */
+    fileprivate(set) public var validationPassed = true
+    
+    // MARK: - Validation methods
+    
+    /**
+     Applies validation rule to an object. If the validation rule fails,
+     an alert with validation description is displayed to a user; also, all subsequent validation calls in the chain
+     will be skipped and not applied.
+     
+     - Parameters:
+        - for: validation description that may be displayed in alert
+        - with: validation rule to apply to the object
+        - o: the object to be validated using validation rule
+        - param: the object to be validated
+        - on: the view for which an alert with validation message will be displayed in case of validation failure
+     
+     - Returns:
+     returnValue: current instance of Validator to build sequence of validation calls
+     */
+    func validate<T>(for validationTitle: String?, with rule: (_ o: T) -> (status: Bool, message: String?), param: T, on view: UIViewController) -> Validator {
+        if (validationPassed) {
+            let validationResult = rule(param)
+            
+            if (!validationResult.status) {
+                validationPassed = false
+                showValidationAlert(for: validationTitle, with: validationResult.message, on: view)
+            }
+        }
+        
+        return self
+    }
+    
+    /**
+     Applies validation rule to objects. If the validation rule fails,
+     an alert with validation description is displayed to a user;
+     also, all subsequent validation calls in the chain will be skipped
+     and not applied.
+     
+     - Parameters:
+         - for: validation description that may be displayed in alert
+         - with: validation rule to apply to the object
+         - o1: the first object used in the validation rule
+         - o2: the second object used in the validation rule
+         - param1: the first object to be validated
+         - param2: the second object to be validated
+         - on: the view for which an alert with validation message will be displayed in case of validation failure
+     
+     - Returns:
+     returnValue: current instance of Validator to build sequence of validation calls
+     */
+    func validate<T>(for validationTitle: String?, with rule: (_ o1: T, _ o2: T) -> (status: Bool, message: String?), param1: T, param2: T, on view: UIViewController) -> Validator {
+        if (validationPassed) {
+            let validationResult = rule(param1, param2)
+            
+            if (!validationResult.status) {
+                validationPassed = false
+                showValidationAlert(for: validationTitle, with: validationResult.message, on: view)
+            }
+        }
+        
+        return self
+    }
+    
+    // MARK: - Helper methods
+    
+    func showValidationAlert(for title: String?, with message: String?, on view: UIViewController) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "Got It", style: .default, handler: nil)
+        alert.addAction(okAction)
+        
+        view.present(alert, animated: true, completion: nil)
+    }
+}
+
+
+/**
+ Validation helper to verify field values. Use instances of this class
+ to apply validation rules to fields and display an alert message
+ to a user in case of validation failure.
+*/
+class TextFieldsValidator: Validator {
     
     // MARK: - Predefined validation rules
     
@@ -75,16 +157,9 @@ class TextFieldsValidator {
      returnValue: current instance of TextFieldsValidator to build sequence of validation calls
     */
     func validate(with rule: (_ f: UITextField) -> (status: Bool, message: String?), for field: UITextField, named fieldName: String?, on view: UIViewController) -> TextFieldsValidator {
-        if (validationPassed) {
-            let validationResult = rule(field)
-            
-            if (!validationResult.status) {
-                validationPassed = false
-                showFieldValidationAlert(for: fieldName, with: validationResult.message, on: view)
-            }
-        }
-        
-        return self
+        return validate(
+            for: "Invalid \(fieldName ?? "") field value",
+            with: rule, param: field, on: view) as! TextFieldsValidator
     }
     
     /**
@@ -105,23 +180,8 @@ class TextFieldsValidator {
      returnValue: current instance of TextFieldsValidator to build sequence of validation calls
      */
     func validate(with rule: (_ f1: UITextField, _ f2: UITextField) -> (status: Bool, message: String?), for field1: UITextField, and field2: UITextField, named fieldsName: String?, on view: UIViewController) -> TextFieldsValidator {
-        if (validationPassed) {
-            let validationResult = rule(field1, field2)
-            if (!validationResult.status) {
-                validationPassed = false
-                showFieldValidationAlert(for: fieldsName, with: validationResult.message, on: view)
-            }
-        }
-        
-        return self
-    }
-    
-    // MARK: - Helper methods
-    
-    private func showFieldValidationAlert(for fieldsName: String?, with message: String?, on view: UIViewController) {
-        let okAction = UIAlertAction(title: "Got It", style: .default, handler: nil)
-        let alert = UIAlertController(title: "Invalid \(fieldsName ?? "") field value", message: message, preferredStyle: .alert)
-        alert.addAction(okAction)
-        view.present(alert, animated: true, completion: nil)
+        return validate(
+            for: "Invalid \(fieldsName ?? "") field values",
+            with: rule, param1: field1, param2: field2, on: view) as! TextFieldsValidator
     }
 }
