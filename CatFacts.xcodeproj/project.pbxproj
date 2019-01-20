@@ -8,22 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		3D8FA01921F4C2B900B6ADFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FA01821F4C2B900B6ADFC /* AppDelegate.swift */; };
-		3D8FA01B21F4C2B900B6ADFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FA01A21F4C2B900B6ADFC /* ViewController.swift */; };
+		3D8FA01B21F4C2B900B6ADFC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FA01A21F4C2B900B6ADFC /* LoginViewController.swift */; };
 		3D8FA01E21F4C2B900B6ADFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D8FA01C21F4C2B900B6ADFC /* Main.storyboard */; };
 		3D8FA02121F4C2B900B6ADFC /* CatFacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FA01F21F4C2B900B6ADFC /* CatFacts.xcdatamodeld */; };
 		3D8FA02321F4C2BA00B6ADFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D8FA02221F4C2BA00B6ADFC /* Assets.xcassets */; };
 		3D8FA02621F4C2BA00B6ADFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D8FA02421F4C2BA00B6ADFC /* LaunchScreen.storyboard */; };
+		3D8FA02E21F4CC5300B6ADFC /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FA02D21F4CC5300B6ADFC /* RegistrationViewController.swift */; };
+		3D8FA03021F4D1AB00B6ADFC /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FA02F21F4D1AB00B6ADFC /* ViewControllerExtensions.swift */; };
+		3DF8592B21F4F000005491EC /* TextFieldsValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF8592A21F4F000005491EC /* TextFieldsValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3D8FA01521F4C2B900B6ADFC /* CatFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D8FA01821F4C2B900B6ADFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3D8FA01A21F4C2B900B6ADFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3D8FA01A21F4C2B900B6ADFC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3D8FA01D21F4C2B900B6ADFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D8FA02021F4C2B900B6ADFC /* CatFacts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CatFacts.xcdatamodel; sourceTree = "<group>"; };
 		3D8FA02221F4C2BA00B6ADFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D8FA02521F4C2BA00B6ADFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D8FA02721F4C2BA00B6ADFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D8FA02D21F4CC5300B6ADFC /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		3D8FA02F21F4D1AB00B6ADFC /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
+		3DF8592A21F4F000005491EC /* TextFieldsValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldsValidator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +63,15 @@
 			isa = PBXGroup;
 			children = (
 				3D8FA01821F4C2B900B6ADFC /* AppDelegate.swift */,
-				3D8FA01A21F4C2B900B6ADFC /* ViewController.swift */,
+				3D8FA01A21F4C2B900B6ADFC /* LoginViewController.swift */,
+				3D8FA02D21F4CC5300B6ADFC /* RegistrationViewController.swift */,
+				3D8FA02F21F4D1AB00B6ADFC /* ViewControllerExtensions.swift */,
 				3D8FA01C21F4C2B900B6ADFC /* Main.storyboard */,
 				3D8FA02221F4C2BA00B6ADFC /* Assets.xcassets */,
 				3D8FA02421F4C2BA00B6ADFC /* LaunchScreen.storyboard */,
 				3D8FA02721F4C2BA00B6ADFC /* Info.plist */,
 				3D8FA01F21F4C2B900B6ADFC /* CatFacts.xcdatamodeld */,
+				3DF8592A21F4F000005491EC /* TextFieldsValidator.swift */,
 			);
 			path = CatFacts;
 			sourceTree = "<group>";
@@ -138,8 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D8FA01B21F4C2B900B6ADFC /* ViewController.swift in Sources */,
+				3DF8592B21F4F000005491EC /* TextFieldsValidator.swift in Sources */,
+				3D8FA01B21F4C2B900B6ADFC /* LoginViewController.swift in Sources */,
 				3D8FA02121F4C2B900B6ADFC /* CatFacts.xcdatamodeld in Sources */,
+				3D8FA02E21F4CC5300B6ADFC /* RegistrationViewController.swift in Sources */,
+				3D8FA03021F4D1AB00B6ADFC /* ViewControllerExtensions.swift in Sources */,
 				3D8FA01921F4C2B900B6ADFC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,7 +308,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.vasiliylada.CatFacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -314,7 +326,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.vasiliylada.CatFacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
