@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CoreData
 
-class DataManager {
+class DatabaseManager {
     static let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     static func loadUserData(_ login: String) -> User? {

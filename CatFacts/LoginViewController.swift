@@ -22,12 +22,17 @@ class LoginViewController: FormFiewController {
     }
 
     @IBAction func logInButtonPressed(_ sender: UIButton) {
-        let validator = TextFieldsValidator()
-            .validate(with: TextFieldsValidator.validateEmailFormat, for: loginField, named: "Login", on: self)
-            .validate(with: TextFieldsValidator.validatePasswordFormat, for: passwordField, named: "Password", on: self)
         
-        if (validator.validationPassed) {
-            // TODO: - Proceed with valid form data
+        let validator = Validator()
+            // validate form data
+            .validate(for: "Login field format", with: TextFieldsValidations.validateEmailFormat, param: loginField, on: self)
+            .validate(for: "Password field format", with: TextFieldsValidations.validatePasswordFormat, param: passwordField, on: self)
+            // validate given user data
+            .validate(for: "User registration", with: DatabaseValidations.validateUserExists, param: loginField.text ?? "", on: self)
+        
+        
+        if (validator.validationsPassed) {
+            // TODO: - Proceed with valid data
             print("login form validation passed")
         }
     }

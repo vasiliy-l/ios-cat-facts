@@ -15,10 +15,12 @@
 		3D8FA02621F4C2BA00B6ADFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D8FA02421F4C2BA00B6ADFC /* LaunchScreen.storyboard */; };
 		3D8FA02E21F4CC5300B6ADFC /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FA02D21F4CC5300B6ADFC /* RegistrationViewController.swift */; };
 		3D8FA03021F4D1AB00B6ADFC /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FA02F21F4D1AB00B6ADFC /* ViewControllerExtensions.swift */; };
-		3DF8592B21F4F000005491EC /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF8592A21F4F000005491EC /* Validators.swift */; };
+		3DF8592B21F4F000005491EC /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF8592A21F4F000005491EC /* Validator.swift */; };
 		3DF8592D21F50F9D005491EC /* String+Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF8592C21F50F9D005491EC /* String+Crypto.swift */; };
 		3DF8592F21F50FE9005491EC /* Data+Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF8592E21F50FE9005491EC /* Data+Crypto.swift */; };
-		3DF8593221F51661005491EC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF8593121F51661005491EC /* DataManager.swift */; };
+		3DF8593221F51661005491EC /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF8593121F51661005491EC /* DatabaseManager.swift */; };
+		3DF8593621F5259F005491EC /* TextFieldsValidations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF8593521F5259F005491EC /* TextFieldsValidations.swift */; };
+		3DF8593921F529DD005491EC /* DatabaseValidations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF8593821F529DD005491EC /* DatabaseValidations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,10 +34,12 @@
 		3D8FA02721F4C2BA00B6ADFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D8FA02D21F4CC5300B6ADFC /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		3D8FA02F21F4D1AB00B6ADFC /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
-		3DF8592A21F4F000005491EC /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
+		3DF8592A21F4F000005491EC /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		3DF8592C21F50F9D005491EC /* String+Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Crypto.swift"; sourceTree = "<group>"; };
 		3DF8592E21F50FE9005491EC /* Data+Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Crypto.swift"; sourceTree = "<group>"; };
-		3DF8593121F51661005491EC /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		3DF8593121F51661005491EC /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		3DF8593521F5259F005491EC /* TextFieldsValidations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldsValidations.swift; sourceTree = "<group>"; };
+		3DF8593821F529DD005491EC /* DatabaseValidations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseValidations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,14 +76,14 @@
 				3D8FA01A21F4C2B900B6ADFC /* LoginViewController.swift */,
 				3D8FA02D21F4CC5300B6ADFC /* RegistrationViewController.swift */,
 				3D8FA02F21F4D1AB00B6ADFC /* ViewControllerExtensions.swift */,
-				3DF8592A21F4F000005491EC /* Validators.swift */,
+				3DF8593721F525BA005491EC /* Validation */,
 				3D8FA01C21F4C2B900B6ADFC /* Main.storyboard */,
 				3D8FA02221F4C2BA00B6ADFC /* Assets.xcassets */,
 				3D8FA02421F4C2BA00B6ADFC /* LaunchScreen.storyboard */,
 				3D8FA02721F4C2BA00B6ADFC /* Info.plist */,
 				3D8FA01F21F4C2B900B6ADFC /* CatFacts.xcdatamodeld */,
 				3DF8593021F5103C005491EC /* Crypto */,
-				3DF8593121F51661005491EC /* DataManager.swift */,
+				3DF8593121F51661005491EC /* DatabaseManager.swift */,
 			);
 			path = CatFacts;
 			sourceTree = "<group>";
@@ -91,6 +95,16 @@
 				3DF8592E21F50FE9005491EC /* Data+Crypto.swift */,
 			);
 			path = Crypto;
+			sourceTree = "<group>";
+		};
+		3DF8593721F525BA005491EC /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				3DF8592A21F4F000005491EC /* Validator.swift */,
+				3DF8593521F5259F005491EC /* TextFieldsValidations.swift */,
+				3DF8593821F529DD005491EC /* DatabaseValidations.swift */,
+			);
+			path = Validation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,14 +178,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DF8592B21F4F000005491EC /* Validators.swift in Sources */,
+				3DF8592B21F4F000005491EC /* Validator.swift in Sources */,
 				3D8FA01B21F4C2B900B6ADFC /* LoginViewController.swift in Sources */,
+				3DF8593621F5259F005491EC /* TextFieldsValidations.swift in Sources */,
 				3DF8592F21F50FE9005491EC /* Data+Crypto.swift in Sources */,
 				3DF8592D21F50F9D005491EC /* String+Crypto.swift in Sources */,
 				3D8FA02121F4C2B900B6ADFC /* CatFacts.xcdatamodeld in Sources */,
 				3D8FA02E21F4CC5300B6ADFC /* RegistrationViewController.swift in Sources */,
+				3DF8593921F529DD005491EC /* DatabaseValidations.swift in Sources */,
 				3D8FA03021F4D1AB00B6ADFC /* ViewControllerExtensions.swift in Sources */,
-				3DF8593221F51661005491EC /* DataManager.swift in Sources */,
+				3DF8593221F51661005491EC /* DatabaseManager.swift in Sources */,
 				3D8FA01921F4C2B900B6ADFC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
