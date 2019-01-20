@@ -16,6 +16,8 @@
 		3D8FA02E21F4CC5300B6ADFC /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FA02D21F4CC5300B6ADFC /* RegistrationViewController.swift */; };
 		3D8FA03021F4D1AB00B6ADFC /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FA02F21F4D1AB00B6ADFC /* ViewControllerExtensions.swift */; };
 		3DF8592B21F4F000005491EC /* TextFieldsValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF8592A21F4F000005491EC /* TextFieldsValidator.swift */; };
+		3DF8592D21F50F9D005491EC /* String+Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF8592C21F50F9D005491EC /* String+Crypto.swift */; };
+		3DF8592F21F50FE9005491EC /* Data+Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF8592E21F50FE9005491EC /* Data+Crypto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		3D8FA02D21F4CC5300B6ADFC /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		3D8FA02F21F4D1AB00B6ADFC /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
 		3DF8592A21F4F000005491EC /* TextFieldsValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldsValidator.swift; sourceTree = "<group>"; };
+		3DF8592C21F50F9D005491EC /* String+Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Crypto.swift"; sourceTree = "<group>"; };
+		3DF8592E21F50FE9005491EC /* Data+Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Crypto.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +76,18 @@
 				3D8FA02421F4C2BA00B6ADFC /* LaunchScreen.storyboard */,
 				3D8FA02721F4C2BA00B6ADFC /* Info.plist */,
 				3D8FA01F21F4C2B900B6ADFC /* CatFacts.xcdatamodeld */,
+				3DF8593021F5103C005491EC /* Crypto */,
 			);
 			path = CatFacts;
+			sourceTree = "<group>";
+		};
+		3DF8593021F5103C005491EC /* Crypto */ = {
+			isa = PBXGroup;
+			children = (
+				3DF8592C21F50F9D005491EC /* String+Crypto.swift */,
+				3DF8592E21F50FE9005491EC /* Data+Crypto.swift */,
+			);
+			path = Crypto;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +163,8 @@
 			files = (
 				3DF8592B21F4F000005491EC /* TextFieldsValidator.swift in Sources */,
 				3D8FA01B21F4C2B900B6ADFC /* LoginViewController.swift in Sources */,
+				3DF8592F21F50FE9005491EC /* Data+Crypto.swift in Sources */,
+				3DF8592D21F50F9D005491EC /* String+Crypto.swift in Sources */,
 				3D8FA02121F4C2B900B6ADFC /* CatFacts.xcdatamodeld in Sources */,
 				3D8FA02E21F4CC5300B6ADFC /* RegistrationViewController.swift in Sources */,
 				3D8FA03021F4D1AB00B6ADFC /* ViewControllerExtensions.swift in Sources */,
