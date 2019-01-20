@@ -23,17 +23,18 @@ class LoginViewController: FormFiewController {
 
     @IBAction func logInButtonPressed(_ sender: UIButton) {
         
-        let validator = Validator()
+        var validator = Validator()
             // validate form data
             .validate(for: "Login field format", with: TextFieldsValidations.validateEmailFormat, param: loginField, on: self)
             .validate(for: "Password field format", with: TextFieldsValidations.validatePasswordFormat, param: passwordField, on: self)
             // validate given user data
             .validate(for: "User registration", with: DatabaseValidations.validateUserExists, param: loginField.text ?? "", on: self)
-        
+            validator = validator
+                .validate(for: "User login", with: DatabaseValidations.validateUserCorrectPassword, param1: validator.lastValidationResultData as? User, param2: passwordField.text, on: self)
         
         if (validator.validationsPassed) {
             // TODO: - Proceed with valid data
-            print("login form validation passed")
+            print("login data validation passed")
         }
     }
     

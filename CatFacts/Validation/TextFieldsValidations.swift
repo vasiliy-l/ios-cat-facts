@@ -17,36 +17,36 @@ class TextFieldsValidations {
     /**
      Checks that given text field contains text value in proper e-mail format.
      */
-    static let validateEmailFormat: (UITextField) -> (status: Bool, message: String?) = { (field) in
+    static let validateEmailFormat: (UITextField) -> (status: Bool, message: String?, returnValue: String?) = { (field) in
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         
         if (!emailTest.evaluate(with: field.text)) {
-            return (false, "Invalid e-mail address. Valid e-mail must be in the format like john.doe@gmail.com. Please check entered e-mail address.")
+            return (false, "Invalid e-mail address. Valid e-mail must be in the format like john.doe@gmail.com. Please check entered e-mail address.", field.text)
         }
         
-        return (true, nil)
+        return (true, nil, field.text)
     }
     
     /**
      Checks that given text field contains text value in proper password format.
      */
-    static let validatePasswordFormat: (UITextField) -> (status: Bool, message: String?) = { (field) in
+    static let validatePasswordFormat: (UITextField) -> (status: Bool, message: String?, returnValue: String?) = { (field) in
         if (field.text?.count ?? 0 < 5) {
-            return (false, "Insecure password. Please enter password with 5 or more characters length.")
+            return (false, "Insecure password. Please enter password with 5 or more characters length.", field.text)
         }
         
-        return (true, nil)
+        return (true, nil, field.text)
     }
     
     /**
      Checks that given text fields contain equal text.
      */
-    static let validateEqualValues: (UITextField, UITextField) -> (status: Bool, message: String?) = { (field1, field2) in
+    static let validateEqualValues: (UITextField, UITextField) -> (status: Bool, message: String?, returnValue: [String]?) = { (field1, field2) in
         if (field1.text != field2.text) {
-            return (false, "Different values for fields. Make sure that the fields are filled with the same value.")
+            return (false, "Different values for fields. Make sure that the fields are filled with the same value.", [field1.text ?? "", field2.text ?? ""])
         }
         
-        return (true, nil)
+        return (true, nil, [field1.text ?? "", field2.text ?? ""])
     }
 }
