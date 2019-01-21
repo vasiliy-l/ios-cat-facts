@@ -33,13 +33,17 @@ class LoginViewController: FormFiewController {
                 .validate(for: "User login", with: DatabaseValidations.validateUserCorrectPassword, param1: validator.lastValidationResultData as? User, param2: passwordField.text, on: self)
         
         if (validator.validationsPassed) {
-            // TODO: - Proceed with valid data
-            print("login data validation passed")
+            // TODO: - Save user session
+            
+            performSegue(withIdentifier: "goToCatFactsFromLogin", sender: self)
         }
     }
     
     @IBAction func createAccountButtonPressed(_ sender: UIButton) {
         performSegue(withIdentifier: "goToRegistration", sender: self)
+    }
+    @IBAction func goToCatFactsButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToCatFactsFromLogin", sender: self)
     }
 }
 

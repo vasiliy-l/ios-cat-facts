@@ -44,7 +44,14 @@ class RegistrationViewController: FormFiewController {
         
         if (validator.validationsPassed) {
             let _ = DatabaseManager.saveUserData(login: loginField.text, password: passwordField.text)
-            // TODO: - save session and navigate to main view
+            
+            // TODO: - Save user session
+            
+            performSegue(withIdentifier: "goToCatFactsFromRegistration", sender: self)
         }
+    }
+    
+    @IBAction func goToCatFactsButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToCatFactsFromRegistration", sender: self)
     }
 }

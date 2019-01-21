@@ -110,6 +110,15 @@
                                     <action selector="createAccountButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="31i-7Q-rH3"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLT-Nb-hWd">
+                                <rect key="frame" x="16" y="617" width="129" height="30"/>
+                                <state key="normal" title="GO TO CAT FACTS">
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToCatFactsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="beL-qX-goO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -117,6 +126,8 @@
                             <constraint firstItem="Pie-SL-FUC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Eyu-Fa-dBJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6hm-YT-qz0" secondAttribute="trailing" constant="16" id="c5n-rn-gVn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6hm-YT-qz0" secondAttribute="bottom" constant="20" id="d4e-M8-Ngk"/>
+                            <constraint firstItem="QLT-Nb-hWd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="dcv-1y-pfg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QLT-Nb-hWd" secondAttribute="bottom" constant="20" id="wTc-Ry-LcC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -125,6 +136,7 @@
                         <outlet property="loginField" destination="LgP-Oi-fbH" id="AH6-sQ-ccO"/>
                         <outlet property="passwordField" destination="bgl-4o-57r" id="vbJ-ga-yzQ"/>
                         <segue destination="y6u-yN-cvN" kind="show" identifier="goToRegistration" id="rVL-Xp-jcr"/>
+                        <segue destination="V1i-Df-ICL" kind="show" identifier="goToCatFactsFromLogin" id="KDi-HE-PGh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -258,11 +270,23 @@
                                     <constraint firstAttribute="bottom" secondItem="EYG-8O-Dfl" secondAttribute="bottom" constant="8" id="rZW-KF-INx"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GtH-6x-WXS">
+                                <rect key="frame" x="16" y="617" width="129" height="30"/>
+                                <state key="normal" title="GO TO CAT FACTS">
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToCatFactsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NXs-da-8Gw"/>
+                                    <action selector="goToCatFactsButtonPressed:" destination="y6u-yN-cvN" eventType="touchUpInside" id="qiH-J3-zuB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="x3A-4l-YCx" firstAttribute="centerY" secondItem="hvo-1B-Yc5" secondAttribute="centerY" id="ISk-Zh-xIu"/>
                             <constraint firstItem="x3A-4l-YCx" firstAttribute="centerX" secondItem="hvo-1B-Yc5" secondAttribute="centerX" id="Mvp-Fa-OMP"/>
+                            <constraint firstItem="GtH-6x-WXS" firstAttribute="leading" secondItem="IfN-z3-Hht" secondAttribute="leading" constant="16" id="lt4-6s-35C"/>
+                            <constraint firstItem="IfN-z3-Hht" firstAttribute="bottom" secondItem="GtH-6x-WXS" secondAttribute="bottom" constant="20" id="yIk-l7-g4e"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IfN-z3-Hht"/>
                     </view>
@@ -271,11 +295,37 @@
                         <outlet property="loginField" destination="EJ2-Yo-RRt" id="I0w-ip-62z"/>
                         <outlet property="passwordField" destination="T5a-8z-adc" id="Z3w-MI-rv1"/>
                         <outlet property="repeatPasswordField" destination="307-Kk-yMA" id="l71-Gi-j2M"/>
+                        <segue destination="V1i-Df-ICL" kind="show" identifier="goToCatFactsFromRegistration" id="tcG-Xa-ccr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8c9-Mp-hIK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1814" y="132"/>
+            <point key="canvasLocation" x="1958" y="-368"/>
+        </scene>
+        <!--Cat Facts-->
+        <scene sceneID="7uP-5g-MSW">
+            <objects>
+                <tableViewController id="V1i-Df-ICL" customClass="CatFactsViewController" customModule="CatFacts" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8Rt-By-9wW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="V1i-Df-ICL" id="yk8-JA-DQq"/>
+                            <outlet property="delegate" destination="V1i-Df-ICL" id="FF8-89-ENn"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Cat Facts" id="Nud-As-XA8">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="eer-ds-kSp">
+                            <connections>
+                                <action selector="logoutNavigationButtonPressed:" destination="V1i-Df-ICL" id="iUu-wT-b78"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2sl-lH-Jca" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2871" y="132"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FwR-Dp-3SS">
@@ -296,4 +346,7 @@
             <point key="canvasLocation" x="297" y="132"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="tcG-Xa-ccr"/>
+    </inferredMetricsTieBreakers>
 </document>

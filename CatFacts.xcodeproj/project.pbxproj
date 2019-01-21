@@ -16,6 +16,9 @@
 		3D8FA02E21F4CC5300B6ADFC /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FA02D21F4CC5300B6ADFC /* RegistrationViewController.swift */; };
 		3D8FA03021F4D1AB00B6ADFC /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FA02F21F4D1AB00B6ADFC /* ViewControllerExtensions.swift */; };
 		3DF1215B21F6476D00D0EF95 /* User+Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF1215A21F6476D00D0EF95 /* User+Crypto.swift */; };
+		3DF1215D21F65B6D00D0EF95 /* CatFactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF1215C21F65B6D00D0EF95 /* CatFactsViewController.swift */; };
+		3DF1216021F65E2B00D0EF95 /* CatFactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF1215E21F65E2B00D0EF95 /* CatFactsTableViewCell.swift */; };
+		3DF1216121F65E2B00D0EF95 /* CatFactsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DF1215F21F65E2B00D0EF95 /* CatFactsTableViewCell.xib */; };
 		3DF8592B21F4F000005491EC /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF8592A21F4F000005491EC /* Validator.swift */; };
 		3DF8592D21F50F9D005491EC /* String+Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF8592C21F50F9D005491EC /* String+Crypto.swift */; };
 		3DF8592F21F50FE9005491EC /* Data+Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF8592E21F50FE9005491EC /* Data+Crypto.swift */; };
@@ -36,6 +39,9 @@
 		3D8FA02D21F4CC5300B6ADFC /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		3D8FA02F21F4D1AB00B6ADFC /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
 		3DF1215A21F6476D00D0EF95 /* User+Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Crypto.swift"; sourceTree = "<group>"; };
+		3DF1215C21F65B6D00D0EF95 /* CatFactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactsViewController.swift; sourceTree = "<group>"; };
+		3DF1215E21F65E2B00D0EF95 /* CatFactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactsTableViewCell.swift; sourceTree = "<group>"; };
+		3DF1215F21F65E2B00D0EF95 /* CatFactsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatFactsTableViewCell.xib; sourceTree = "<group>"; };
 		3DF8592A21F4F000005491EC /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		3DF8592C21F50F9D005491EC /* String+Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Crypto.swift"; sourceTree = "<group>"; };
 		3DF8592E21F50FE9005491EC /* Data+Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Crypto.swift"; sourceTree = "<group>"; };
@@ -87,6 +93,9 @@
 				3DF8593021F5103C005491EC /* Crypto */,
 				3DF8593121F51661005491EC /* DatabaseManager.swift */,
 				3DF1215A21F6476D00D0EF95 /* User+Crypto.swift */,
+				3DF1215C21F65B6D00D0EF95 /* CatFactsViewController.swift */,
+				3DF1215E21F65E2B00D0EF95 /* CatFactsTableViewCell.swift */,
+				3DF1215F21F65E2B00D0EF95 /* CatFactsTableViewCell.xib */,
 			);
 			path = CatFacts;
 			sourceTree = "<group>";
@@ -170,6 +179,7 @@
 			files = (
 				3D8FA02621F4C2BA00B6ADFC /* LaunchScreen.storyboard in Resources */,
 				3D8FA02321F4C2BA00B6ADFC /* Assets.xcassets in Resources */,
+				3DF1216121F65E2B00D0EF95 /* CatFactsTableViewCell.xib in Resources */,
 				3D8FA01E21F4C2B900B6ADFC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,11 +191,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DF1215D21F65B6D00D0EF95 /* CatFactsViewController.swift in Sources */,
 				3DF8592B21F4F000005491EC /* Validator.swift in Sources */,
 				3D8FA01B21F4C2B900B6ADFC /* LoginViewController.swift in Sources */,
 				3DF8593621F5259F005491EC /* TextFieldsValidations.swift in Sources */,
 				3DF8592F21F50FE9005491EC /* Data+Crypto.swift in Sources */,
 				3DF8592D21F50F9D005491EC /* String+Crypto.swift in Sources */,
+				3DF1216021F65E2B00D0EF95 /* CatFactsTableViewCell.swift in Sources */,
 				3D8FA02121F4C2B900B6ADFC /* CatFacts.xcdatamodeld in Sources */,
 				3D8FA02E21F4CC5300B6ADFC /* RegistrationViewController.swift in Sources */,
 				3DF1215B21F6476D00D0EF95 /* User+Crypto.swift in Sources */,
