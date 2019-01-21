@@ -45,7 +45,8 @@ extension User {
     // MARK: - Supporting methods for internal logic
     
     private func generatePasswordHash(for password: String?) -> String? {
-        guard let hash = password?.hashed(HashType.md5) else {
+        let salt = "myPasswordSalt123"
+        guard let uPassword = password, let hash = (uPassword + salt).hashed(HashType.md5) else {
             return nil
         }
         
