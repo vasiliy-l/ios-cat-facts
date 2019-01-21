@@ -15,9 +15,21 @@ class DatabaseValidations {
     static let validateUserExists: (String) -> (status: Bool, message: String?, returnValue: User?) = { (login) in
         let user = DatabaseManager.loadUserData(login)
         if (user == nil) {
-            return (false, "User with login \(login) is not registered.", user)
+            return (false, "User with login \(login) is not registered. Make sure that valid user login entered or use registration link to create new account.", user)
         }
 
+        return (true, nil, user)
+    }
+    
+    /**
+     Checks that database doesn't contain a user record by given login string.
+     */
+    static let validateUserNotExists: (String) -> (status: Bool, message: String?, returnValue: User?) = { (login) in
+        let user = DatabaseManager.loadUserData(login)
+        if (user != nil) {
+            return (false, "User with login \(login) is already registered. You're ready to sign in using provided login.", user)
+        }
+        
         return (true, nil, user)
     }
     
@@ -30,7 +42,7 @@ class DatabaseValidations {
         }
         
         if (!uUser.validatePassword(password)) {
-            return (false, "Incorrect user password.", databaseUser)
+            return (false, "Incorrect user password. Make sure that valid user password entered.", databaseUser)
         }
         
         return (true, nil, databaseUser)
