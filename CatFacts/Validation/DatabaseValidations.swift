@@ -24,12 +24,12 @@ class DatabaseValidations {
     /**
      Checks that provided user password matches to the stored value in the database.
      */
-    static let validateUserCorrectPassword: (User?, String) -> (status: Bool, message: String?, returnValue: User?) = { (databaseUser, login) in
+    static let validateUserCorrectPassword: (User?, String?) -> (status: Bool, message: String?, returnValue: User?) = { (databaseUser, password) in
         guard let uUser = databaseUser else {
             return (false, "Unable to validate given user data.", databaseUser)
         }
         
-        if (login.hashed(HashType.md5) == uUser.passwordHash) {
+        if (!uUser.validatePassword(password)) {
             return (false, "Incorrect user password.", databaseUser)
         }
         

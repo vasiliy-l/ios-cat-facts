@@ -30,7 +30,7 @@ class LoginViewController: FormFiewController {
             // validate given user data
             .validate(for: "User registration", with: DatabaseValidations.validateUserExists, param: loginField.text ?? "", on: self)
             validator = validator
-                .validate(for: "User login", with: DatabaseValidations.validateUserCorrectPassword, param1: validator.lastValidationResultData as? User, param2: passwordField.text ?? "", on: self)
+                .validate(for: "User login", with: DatabaseValidations.validateUserCorrectPassword, param1: validator.lastValidationResultData as? User, param2: passwordField.text, on: self)
         
         if (validator.validationsPassed) {
             // TODO: - Proceed with valid data
