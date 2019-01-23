@@ -10,6 +10,18 @@ import UIKit
 
 class CatFactsTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var avatarImage: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var textCommentLabel: UILabel!
+    
+    var item: Comment? {
+        didSet {
+            nameLabel.text = "\(item?.firstName ?? "") \(item?.lastName ?? "")"
+            textCommentLabel.text = item?.text
+        }
+    }
+    
+    
     static var nib:UINib {
         return UINib(nibName: identifier, bundle: nil)
     }
