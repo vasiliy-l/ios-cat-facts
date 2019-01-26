@@ -19,9 +19,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="89.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rJG-uw-2Ca" userLabel="Avatar Image">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="rJG-uw-2Ca" userLabel="Avatar Image">
                         <rect key="frame" x="16" y="15" width="60" height="60"/>
-                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="60" id="GAG-H1-gJO"/>
                             <constraint firstAttribute="width" secondItem="rJG-uw-2Ca" secondAttribute="height" multiplier="1:1" id="o9z-DP-aec"/>
@@ -67,4 +66,7 @@
             <point key="canvasLocation" x="201.59999999999999" y="85.457271364317847"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="Avatar" width="60" height="60"/>
+    </resources>
 </document>
