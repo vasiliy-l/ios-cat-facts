@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+
+
 public class CatFactsViewModel: NSObject {
     var items = [Comment]()
     

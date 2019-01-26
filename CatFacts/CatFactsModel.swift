@@ -8,7 +8,11 @@
 
 import Foundation
 
-public class Comment {
+func getServerData() {
+    
+}
+
+class Comment {
     var firstName: String?
     var lastName: String?
     var text: String?
