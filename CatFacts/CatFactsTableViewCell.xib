@@ -23,32 +23,39 @@
                         <rect key="frame" x="16" y="15" width="60" height="60"/>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="60" id="CcT-ob-3Qm"/>
-                            <constraint firstAttribute="width" constant="60" id="wt1-W7-prc"/>
+                            <constraint firstAttribute="height" constant="60" id="GAG-H1-gJO"/>
+                            <constraint firstAttribute="width" secondItem="rJG-uw-2Ca" secondAttribute="height" multiplier="1:1" id="o9z-DP-aec"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Last" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksK-wZ-59i" userLabel="Name Label">
-                        <rect key="frame" x="84" y="11" width="212" height="21"/>
+                        <rect key="frame" x="84" y="11" width="220" height="21"/>
+                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jo-ak-EUI" userLabel="Text Label">
-                        <rect key="frame" x="84" y="35" width="212" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jo-ak-EUI" userLabel="Text Label">
+                        <rect key="frame" x="84" y="35" width="220" height="21"/>
+                        <color key="backgroundColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="1R0-MB-66O"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="3jo-ak-EUI" firstAttribute="leading" secondItem="rJG-uw-2Ca" secondAttribute="trailing" constant="8" id="7wM-eD-srw"/>
-                    <constraint firstItem="ksK-wZ-59i" firstAttribute="leading" secondItem="rJG-uw-2Ca" secondAttribute="trailing" constant="8" id="95C-QZ-UZl"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="3jo-ak-EUI" secondAttribute="trailing" constant="8" id="GVx-ez-1wb"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="ksK-wZ-59i" secondAttribute="trailing" constant="8" id="efl-FH-aUZ"/>
-                    <constraint firstItem="3jo-ak-EUI" firstAttribute="top" secondItem="ksK-wZ-59i" secondAttribute="bottom" constant="3" id="h2N-xs-R95"/>
-                    <constraint firstItem="ksK-wZ-59i" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="huL-RN-Oup"/>
-                    <constraint firstItem="rJG-uw-2Ca" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="mbf-7i-UR8"/>
-                    <constraint firstItem="rJG-uw-2Ca" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="zS4-Jn-GLo"/>
+                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="rJG-uw-2Ca" secondAttribute="bottom" constant="4" id="048-XL-0sH"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="3jo-ak-EUI" secondAttribute="trailing" id="3Vi-xP-1d7"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="ksK-wZ-59i" secondAttribute="trailing" id="7QT-61-REQ"/>
+                    <constraint firstItem="rJG-uw-2Ca" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="8Tz-b4-9v2"/>
+                    <constraint firstItem="3jo-ak-EUI" firstAttribute="leading" secondItem="rJG-uw-2Ca" secondAttribute="trailing" constant="8" id="Abc-wi-Yef"/>
+                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="3jo-ak-EUI" secondAttribute="bottom" constant="4" id="HyR-gT-4lI"/>
+                    <constraint firstItem="ksK-wZ-59i" firstAttribute="leading" secondItem="rJG-uw-2Ca" secondAttribute="trailing" constant="8" id="UaK-zX-cfp"/>
+                    <constraint firstItem="3jo-ak-EUI" firstAttribute="top" secondItem="ksK-wZ-59i" secondAttribute="bottom" constant="3" id="c2G-ic-aLe"/>
+                    <constraint firstItem="rJG-uw-2Ca" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="qD3-PO-qBp"/>
+                    <constraint firstItem="ksK-wZ-59i" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="vLd-vI-rwZ"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

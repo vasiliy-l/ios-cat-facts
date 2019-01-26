@@ -22,14 +22,14 @@ public class CatFactsViewModel: NSObject {
         items.append(comment1)
         
         let comment2 = Comment()
-        comment1.firstName = "Dasy"
-        comment1.text = "Good Day!"
+        comment2.firstName = "Dasy"
+        comment2.text = "Good Day!"
         items.append(comment2)
         
         let comment3 = Comment()
-        comment1.firstName = "Alice"
-        comment1.lastName = "Someone"
-        comment1.text = "Spaghetti eel; stingray; dottyback. Rudd bala shark yellowfin cutthroat trout jackfish desert pupfish muskellunge weasel shark quillback, dorab crucian carp?"
+        comment3.firstName = "Alice"
+        comment3.lastName = "Someone"
+        comment3.text = "Spaghetti eel; stingray; dottyback. Rudd bala shark yellowfin cutthroat trout jackfish desert pupfish muskellunge weasel shark quillback, dorab crucian carp?"
         items.append(comment3)
     }
 }
@@ -47,6 +47,7 @@ extension CatFactsViewModel: UITableViewDataSource {
             cell.item = item
             return cell
         }
+        
         return UITableViewCell()
     }
 }
