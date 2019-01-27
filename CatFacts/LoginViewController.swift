@@ -25,8 +25,11 @@ class LoginViewController: FormFiewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-
-
+    override func viewWillAppear(_ animated: Bool) {
+        passwordField.text = nil // clear password field when the user returns back (e.g.: logs out)
+    }
+    
+    
     @IBAction func logInButtonPressed(_ sender: UIButton) {
         
         var validator = Validator()
