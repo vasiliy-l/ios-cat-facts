@@ -19,6 +19,9 @@ class CatFactsViewController: UITableViewController {
         
         tableView?.register(CatFactsTableViewCell.nib, forCellReuseIdentifier: CatFactsTableViewCell.identifier)
         tableView?.dataSource = viewModel
+        viewModel.dataUpdatedAction = { // add an action to refresh the table with comments when new data is loaded
+            self.tableView.reloadData()
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

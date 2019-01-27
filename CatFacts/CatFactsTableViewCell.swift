@@ -16,11 +16,17 @@ class CatFactsTableViewCell: UITableViewCell {
     
     var item: Comment? {
         didSet {
-            nameLabel.text = "\(item?.firstName ?? "") \(item?.lastName ?? "")"
+            let firstName = item?.firstName
+            let lastName = item?.lastName
+            if (firstName == nil && lastName == nil) {
+                nameLabel.text = "Anonymous user"
+            } else {
+              nameLabel.text = "\(firstName ?? "") \(lastName ?? "")"
+            }
+            
             textCommentLabel.text = item?.text
         }
     }
-    
     
     static var nib:UINib {
         return UINib(nibName: identifier, bundle: nil)

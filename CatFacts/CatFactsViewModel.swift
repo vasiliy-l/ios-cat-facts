@@ -9,30 +9,40 @@
 import Foundation
 import UIKit
 
-
-
-public class CatFactsViewModel: NSObject {
-    var items = [Comment]()
+class CatFactsViewModel: NSObject {
+    
+    /**
+     The action that will be called every time when model data is updated.
+     Also, the action is called during setting this field.
+    */
+    var dataUpdatedAction: (() -> ())? {
+        didSet {
+            guard let action = dataUpdatedAction else {
+                return
+            }
+            action()
+        }
+    }
+    
+    /**
+     Model data, the array of currently loaded comments.
+     dataUpdatedAction action is called every time this field is updated.
+    */
+    var items = [Comment]() {
+        didSet {
+            guard let action = dataUpdatedAction else {
+                return
+            }
+            action()
+        }
+    }
     
     override public init() {
         super.init()
         
-        let comment1 = Comment()
-        comment1.firstName = "John"
-        comment1.lastName = "Smith"
-        comment1.text = "Hello"
-        items.append(comment1)
-        
-        let comment2 = Comment()
-        comment2.firstName = "Dasy"
-        comment2.text = "Good Day!"
-        items.append(comment2)
-        
-        let comment3 = Comment()
-        comment3.firstName = "Alice"
-        comment3.lastName = "Someone"
-        comment3.text = "Spaghetti eel; stingray; dottyback. Rudd bala shark yellowfin cutthroat trout jackfish desert pupfish muskellunge weasel shark quillback, dorab crucian carp?"
-        items.append(comment3)
+        getServerData { (jsonData) in
+            self.items = Comment.parse(jsonData)
+        }
     }
 }
 
