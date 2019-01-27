@@ -31,19 +31,23 @@ class FormFiewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    
     override func viewDidLoad() {
-        self.hideKeyboardWhenTappedAround()
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
     }
     
+    // MARK: - UITextFieldDelegate implementation
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if (textField.returnKeyType == .done) {
+        if (textField.returnKeyType == .done) { // close keyboard if Done button pressed
             textField.resignFirstResponder()
             return false
         }
         
         let nextTag = textField.tag + 1
         
+        // looks for the next control on the screen
         var nextControl = textField.superview?.viewWithTag(nextTag)
         if (nextControl == nil) {
             nextControl = textField.superview?.superview?.viewWithTag(nextTag)
@@ -63,6 +67,7 @@ class FormFiewController: UIViewController, UITextFieldDelegate {
  Adds a method for activating keyboard autohiding feature when user taps outside text fields.
 */
 extension FormFiewController {
+    
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action:    #selector(FormFiewController.dismissKeyboard))
         tap.cancelsTouchesInView = false

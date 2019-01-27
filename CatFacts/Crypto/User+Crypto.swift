@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Extends CoreData Entity class to work with user passwords
 extension User {
     
     /**

@@ -14,25 +14,15 @@ class RegistrationViewController: FormFiewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var repeatPasswordField: UITextField!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Mark which of the fields on the screen are related to Registration form
         formTextFields = [loginField, passwordField, repeatPasswordField]
-        
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
     @IBAction func registerButtonPressed(_ sender: UIButton) {
         let validator = Validator()
             // validate form data

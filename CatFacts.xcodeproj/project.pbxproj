@@ -105,6 +105,7 @@
 		3D8FA01721F4C2B900B6ADFC /* CatFacts */ = {
 			isa = PBXGroup;
 			children = (
+				3D3A672121FDE6AE004B2964 /* User+NSCoding.swift */,
 				3D8FA01821F4C2B900B6ADFC /* AppDelegate.swift */,
 				3D8FA01A21F4C2B900B6ADFC /* LoginViewController.swift */,
 				3D8FA02D21F4CC5300B6ADFC /* RegistrationViewController.swift */,
@@ -117,7 +118,6 @@
 				3D8FA01F21F4C2B900B6ADFC /* CatFacts.xcdatamodeld */,
 				3DF8593021F5103C005491EC /* Crypto */,
 				3DF8593121F51661005491EC /* DatabaseManager.swift */,
-				3DF1215A21F6476D00D0EF95 /* User+Crypto.swift */,
 				3DF1215C21F65B6D00D0EF95 /* CatFactsViewController.swift */,
 				3DF1215E21F65E2B00D0EF95 /* CatFactsTableViewCell.swift */,
 				3DF1215F21F65E2B00D0EF95 /* CatFactsTableViewCell.xib */,
@@ -132,9 +132,9 @@
 		3DF8593021F5103C005491EC /* Crypto */ = {
 			isa = PBXGroup;
 			children = (
+				3DF1215A21F6476D00D0EF95 /* User+Crypto.swift */,
 				3DF8592C21F50F9D005491EC /* String+Crypto.swift */,
 				3DF8592E21F50FE9005491EC /* Data+Crypto.swift */,
-				3D3A672121FDE6AE004B2964 /* User+NSCoding.swift */,
 			);
 			path = Crypto;
 			sourceTree = "<group>";

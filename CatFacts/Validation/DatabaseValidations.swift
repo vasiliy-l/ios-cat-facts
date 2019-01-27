@@ -8,7 +8,11 @@
 
 import Foundation
 
+/**
+ Collection of predefined database-related validation rules.
+ */
 class DatabaseValidations {
+    
     /**
      Checks that database contains a user record by given login string.
      */
@@ -47,5 +51,4 @@ class DatabaseValidations {
         
         return (true, nil, databaseUser)
     }
-    
 }

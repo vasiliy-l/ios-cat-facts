@@ -13,16 +13,16 @@ class LoginViewController: FormFiewController {
     @IBOutlet weak var loginField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Mark which of the fields on the screen are related to Login form
         formTextFields = [loginField, passwordField]
         
         let _ = SessionManager.resotreUserSession { // navigate to main screen if the user is already authenticated
             self.performSegue(withIdentifier: "goToCatFactsFromLogin", sender: self)
         }
-        
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,7 +31,6 @@ class LoginViewController: FormFiewController {
     
     
     @IBAction func logInButtonPressed(_ sender: UIButton) {
-        
         var validator = Validator()
             // validate form data
             .validate(for: "Login field format", with: TextFieldsValidations.validateEmailFormat, param: loginField, on: self)
@@ -58,6 +57,7 @@ class LoginViewController: FormFiewController {
     @IBAction func createAccountButtonPressed(_ sender: UIButton) {
         performSegue(withIdentifier: "goToRegistration", sender: self)
     }
+    
     @IBAction func goToCatFactsButtonPressed(_ sender: UIButton) {
         performSegue(withIdentifier: "goToCatFactsFromLogin", sender: self)
     }
