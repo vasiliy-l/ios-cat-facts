@@ -46,7 +46,9 @@ class RegistrationViewController: FormFiewController {
         }
     }
     
+    /*
     @IBAction func goToCatFactsButtonPressed(_ sender: UIButton) {
         performSegue(withIdentifier: "goToCatFactsFromRegistration", sender: self)
     }
+    */
 }

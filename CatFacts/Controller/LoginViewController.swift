@@ -58,8 +58,10 @@ class LoginViewController: FormFiewController {
         performSegue(withIdentifier: "goToRegistration", sender: self)
     }
     
+    /*
     @IBAction func goToCatFactsButtonPressed(_ sender: UIButton) {
         performSegue(withIdentifier: "goToCatFactsFromLogin", sender: self)
     }
+    */
 }
 
