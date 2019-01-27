@@ -105,28 +105,60 @@
 		3D8FA01721F4C2B900B6ADFC /* CatFacts */ = {
 			isa = PBXGroup;
 			children = (
-				3D3A672121FDE6AE004B2964 /* User+NSCoding.swift */,
 				3D8FA01821F4C2B900B6ADFC /* AppDelegate.swift */,
+				3DDAFABA21FE76EF00B0EFDC /* Model */,
+				3DDAFAB821FE764E00B0EFDC /* Controller */,
+				3DDAFAB921FE769E00B0EFDC /* View */,
+				3D8FA02221F4C2BA00B6ADFC /* Assets.xcassets */,
+				3DDAFABE21FE784C00B0EFDC /* Config */,
+			);
+			path = CatFacts;
+			sourceTree = "<group>";
+		};
+		3DDAFAB821FE764E00B0EFDC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				3D8FA01A21F4C2B900B6ADFC /* LoginViewController.swift */,
 				3D8FA02D21F4CC5300B6ADFC /* RegistrationViewController.swift */,
 				3D8FA02F21F4D1AB00B6ADFC /* FormFiewController.swift */,
-				3DF8593721F525BA005491EC /* Validation */,
-				3D8FA01C21F4C2B900B6ADFC /* Main.storyboard */,
-				3D8FA02221F4C2BA00B6ADFC /* Assets.xcassets */,
-				3D8FA02421F4C2BA00B6ADFC /* LaunchScreen.storyboard */,
-				3D8FA02721F4C2BA00B6ADFC /* Info.plist */,
-				3D8FA01F21F4C2B900B6ADFC /* CatFacts.xcdatamodeld */,
-				3DF8593021F5103C005491EC /* Crypto */,
-				3DF8593121F51661005491EC /* DatabaseManager.swift */,
 				3DF1215C21F65B6D00D0EF95 /* CatFactsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3DDAFAB921FE769E00B0EFDC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3D8FA01C21F4C2B900B6ADFC /* Main.storyboard */,
+				3D8FA02421F4C2BA00B6ADFC /* LaunchScreen.storyboard */,
+				3D3A672521FE1190004B2964 /* Loader.swift */,
 				3DF1215E21F65E2B00D0EF95 /* CatFactsTableViewCell.swift */,
 				3DF1215F21F65E2B00D0EF95 /* CatFactsTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3DDAFABA21FE76EF00B0EFDC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3DF8593121F51661005491EC /* DatabaseManager.swift */,
+				3D3A671F21FDE387004B2964 /* SessionManager.swift */,
+				3DF8593721F525BA005491EC /* Validation */,
+				3DF8593021F5103C005491EC /* Crypto */,
+				3D3A672121FDE6AE004B2964 /* User+NSCoding.swift */,
 				3DA722D321F911D300E154DE /* CatFactsModel.swift */,
 				3DA722D521F9140500E154DE /* CatFactsViewModel.swift */,
-				3D3A671F21FDE387004B2964 /* SessionManager.swift */,
-				3D3A672521FE1190004B2964 /* Loader.swift */,
 			);
-			path = CatFacts;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3DDAFABE21FE784C00B0EFDC /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				3D8FA02721F4C2BA00B6ADFC /* Info.plist */,
+				3D8FA01F21F4C2B900B6ADFC /* CatFacts.xcdatamodeld */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 		3DF8593021F5103C005491EC /* Crypto */ = {
@@ -442,7 +474,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5SKQ8B2GH3;
-				INFOPLIST_FILE = CatFacts/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CatFacts/Config/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -461,7 +493,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5SKQ8B2GH3;
-				INFOPLIST_FILE = CatFacts/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CatFacts/Config/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

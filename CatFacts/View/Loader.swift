@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+// Helper for displaying loader on screen when it's required.
 class Loader {
     
     let view: UIView
