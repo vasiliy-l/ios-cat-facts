@@ -13,14 +13,14 @@ class Loader {
     
     let view: UIView
     
-    private(set) var loaderImage = UIImage(named: "Avatar")!
+    private(set) var loaderImage = UIImage(named: "Loader")!
     private(set) var loader: UIImageView
     
     var loaderAnimation: CAAnimation {
         let animation = CABasicAnimation(keyPath: "transform.rotation.z")
         
         animation.isRemovedOnCompletion = false
-        animation.toValue = 5
+        animation.toValue = -5
         animation.duration = 1
         animation.isCumulative = true
         animation.repeatCount = Float.infinity
