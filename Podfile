@@ -7,4 +7,5 @@ target 'CatFacts' do
 
   # Pods for CatFacts
   pod 'Alamofire', '~> 4.8.1'
+  pod 'SwiftyJSON', '~> 4.2.0'
 end
