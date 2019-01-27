@@ -15,12 +15,12 @@ class CatFactsViewModel: NSObject {
      The action that will be called every time when model data is updated.
      Also, the action is called during setting this field.
     */
-    var dataUpdatedAction: (() -> ())? {
+    var dataUpdatedAction: ((_ rowsAmount: Int) -> ())? {
         didSet {
             guard let action = dataUpdatedAction else {
                 return
             }
-            action()
+            action(items.count)
         }
     }
     
@@ -33,7 +33,7 @@ class CatFactsViewModel: NSObject {
             guard let action = dataUpdatedAction else {
                 return
             }
-            action()
+            action(items.count)
         }
     }
     
