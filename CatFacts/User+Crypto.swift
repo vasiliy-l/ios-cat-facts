@@ -34,8 +34,25 @@ extension User {
      - Returns: true if given password string corresponds to stored password hash;
      false if the given password is nil of the User object has no password hash value stored.
     */
-    func validatePassword(_ password: String?) -> Bool {
+    func validatePassword(password: String?) -> Bool {
         guard let existingHash = passwordHash, let hash = generatePasswordHash(for: password) else {
+            return false
+        }
+        
+        return existingHash == hash
+    }
+    
+    /**
+     Validates given password with existing password hash.
+     
+     - Parameters:
+       - hash: password hash to validate
+     
+     - Returns: true if given hash corresponds to stored password hash;
+       false if the given hash is nil of the User object has no password hash value stored.
+     */
+    func validatePassword(hash: String?) -> Bool {
+        guard let existingHash = self.passwordHash else {
             return false
         }
         

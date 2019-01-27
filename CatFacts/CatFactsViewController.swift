@@ -42,7 +42,8 @@ class CatFactsViewController: UITableViewController {
     */
 
     @IBAction func logoutNavigationButtonPressed(_ sender: UIBarButtonItem) {
-        // TODO: - Clear user session
-        navigationController?.popToRootViewController(animated: true)
+        let _ = SessionManager.logOutUser {
+            navigationController?.popToRootViewController(animated: true)
+        }
     }
 }

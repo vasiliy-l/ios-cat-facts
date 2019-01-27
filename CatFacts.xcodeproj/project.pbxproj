@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		08799C87AAB253A64B9B3182 /* Pods_CatFacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F05C6E0755F7CD57FE6BE5EF /* Pods_CatFacts.framework */; };
+		3D3A672021FDE387004B2964 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3A671F21FDE387004B2964 /* SessionManager.swift */; };
+		3D3A672221FDE6AE004B2964 /* User+NSCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3A672121FDE6AE004B2964 /* User+NSCoding.swift */; };
 		3D8FA01921F4C2B900B6ADFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FA01821F4C2B900B6ADFC /* AppDelegate.swift */; };
 		3D8FA01B21F4C2B900B6ADFC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FA01A21F4C2B900B6ADFC /* LoginViewController.swift */; };
 		3D8FA01E21F4C2B900B6ADFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D8FA01C21F4C2B900B6ADFC /* Main.storyboard */; };
@@ -32,6 +34,8 @@
 
 /* Begin PBXFileReference section */
 		28D9CDD52037CD3CF163EE98 /* Pods-CatFacts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatFacts.release.xcconfig"; path = "Pods/Target Support Files/Pods-CatFacts/Pods-CatFacts.release.xcconfig"; sourceTree = "<group>"; };
+		3D3A671F21FDE387004B2964 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		3D3A672121FDE6AE004B2964 /* User+NSCoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+NSCoding.swift"; sourceTree = "<group>"; };
 		3D8FA01521F4C2B900B6ADFC /* CatFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D8FA01821F4C2B900B6ADFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D8FA01A21F4C2B900B6ADFC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 				3DF1215F21F65E2B00D0EF95 /* CatFactsTableViewCell.xib */,
 				3DA722D321F911D300E154DE /* CatFactsModel.swift */,
 				3DA722D521F9140500E154DE /* CatFactsViewModel.swift */,
+				3D3A671F21FDE387004B2964 /* SessionManager.swift */,
 			);
 			path = CatFacts;
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 			children = (
 				3DF8592C21F50F9D005491EC /* String+Crypto.swift */,
 				3DF8592E21F50FE9005491EC /* Data+Crypto.swift */,
+				3D3A672121FDE6AE004B2964 /* User+NSCoding.swift */,
 			);
 			path = Crypto;
 			sourceTree = "<group>";
@@ -245,11 +251,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CatFacts/Pods-CatFacts-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +277,7 @@
 				3D8FA01B21F4C2B900B6ADFC /* LoginViewController.swift in Sources */,
 				3DF8593621F5259F005491EC /* TextFieldsValidations.swift in Sources */,
 				3DF8592F21F50FE9005491EC /* Data+Crypto.swift in Sources */,
+				3D3A672221FDE6AE004B2964 /* User+NSCoding.swift in Sources */,
 				3DF8592D21F50F9D005491EC /* String+Crypto.swift in Sources */,
 				3DF1216021F65E2B00D0EF95 /* CatFactsTableViewCell.swift in Sources */,
 				3DA722D621F9140500E154DE /* CatFactsViewModel.swift in Sources */,
@@ -280,6 +289,7 @@
 				3D8FA03021F4D1AB00B6ADFC /* ViewControllerExtensions.swift in Sources */,
 				3DF8593221F51661005491EC /* DatabaseManager.swift in Sources */,
 				3D8FA01921F4C2B900B6ADFC /* AppDelegate.swift in Sources */,
+				3D3A672021FDE387004B2964 /* SessionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

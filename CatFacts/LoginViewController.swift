@@ -17,6 +17,10 @@ class LoginViewController: FormFiewController {
         
         formTextFields = [loginField, passwordField]
         
+        let _ = SessionManager.resotreUserSession { // navigate to main screen if the user is already authenticated
+            self.performSegue(withIdentifier: "goToCatFactsFromLogin", sender: self)
+        }
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -31,10 +35,17 @@ class LoginViewController: FormFiewController {
             validator = validator
                 .validate(for: "User login", with: DatabaseValidations.validateUserCorrectPassword, param1: validator.lastValidationResultData as? User, param2: passwordField.text, on: self)
         
-        if (validator.validationsPassed) {
-            // TODO: - Save user session
-            
-            performSegue(withIdentifier: "goToCatFactsFromLogin", sender: self)
+        // proceed with user data
+        guard validator.validationsPassed, let user = validator.lastValidationResultData as? User else {
+            return
+        }
+        
+        // save user auth data and go to main screen
+        guard SessionManager.authenticateUser(user: user, completion: {
+            self.performSegue(withIdentifier: "goToCatFactsFromLogin", sender: self)
+        }) else {
+            validator.showValidationAlert(for: "User login", with: "Unable to authenticate user.", on: self)
+            return
         }
     }
     

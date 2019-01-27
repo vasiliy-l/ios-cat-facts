@@ -41,7 +41,7 @@ class DatabaseValidations {
             return (false, "Unable to validate given user data.", databaseUser)
         }
         
-        if (!uUser.validatePassword(password)) {
+        if (!uUser.validatePassword(password: password)) {
             return (false, "Incorrect user password. Make sure that valid user password entered.", databaseUser)
         }
         

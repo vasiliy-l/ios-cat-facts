@@ -42,12 +42,17 @@ class RegistrationViewController: FormFiewController {
             // validate given user data
             .validate(for: "User registration", with: DatabaseValidations.validateUserNotExists, param: loginField.text ?? "", on: self)
         
-        if (validator.validationsPassed) {
-            let _ = DatabaseManager.saveUserData(login: loginField.text, password: passwordField.text)
-            
-            // TODO: - Save user session
-            
-            performSegue(withIdentifier: "goToCatFactsFromRegistration", sender: self)
+        // proceed with user data
+        guard validator.validationsPassed, let user = DatabaseManager.saveUserData(login: loginField.text, password: passwordField.text) else {
+            return
+        }
+        
+        // save user auth data and go to main screen
+        guard SessionManager.authenticateUser(user: user, completion: {
+            self.performSegue(withIdentifier: "goToCatFactsFromRegistration", sender: self)
+        }) else {
+            validator.showValidationAlert(for: "User registration", with: "Unable to authenticate user.", on: self)
+            return
         }
     }
     
