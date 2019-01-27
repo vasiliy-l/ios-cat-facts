@@ -62,9 +62,9 @@ class FormFiewController: UIViewController, UITextFieldDelegate {
 /**
  Adds a method for activating keyboard autohiding feature when user taps outside text fields.
 */
-extension UIViewController {
+extension FormFiewController {
     func hideKeyboardWhenTappedAround() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action:    #selector(UIViewController.dismissKeyboard))
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action:    #selector(FormFiewController.dismissKeyboard))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }

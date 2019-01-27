@@ -18,7 +18,7 @@
 		3D8FA02321F4C2BA00B6ADFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D8FA02221F4C2BA00B6ADFC /* Assets.xcassets */; };
 		3D8FA02621F4C2BA00B6ADFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D8FA02421F4C2BA00B6ADFC /* LaunchScreen.storyboard */; };
 		3D8FA02E21F4CC5300B6ADFC /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FA02D21F4CC5300B6ADFC /* RegistrationViewController.swift */; };
-		3D8FA03021F4D1AB00B6ADFC /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FA02F21F4D1AB00B6ADFC /* ViewControllerExtensions.swift */; };
+		3D8FA03021F4D1AB00B6ADFC /* FormFiewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FA02F21F4D1AB00B6ADFC /* FormFiewController.swift */; };
 		3DA722D421F911D300E154DE /* CatFactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA722D321F911D300E154DE /* CatFactsModel.swift */; };
 		3DA722D621F9140500E154DE /* CatFactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA722D521F9140500E154DE /* CatFactsViewModel.swift */; };
 		3DF1215B21F6476D00D0EF95 /* User+Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF1215A21F6476D00D0EF95 /* User+Crypto.swift */; };
@@ -47,7 +47,7 @@
 		3D8FA02521F4C2BA00B6ADFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D8FA02721F4C2BA00B6ADFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D8FA02D21F4CC5300B6ADFC /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
-		3D8FA02F21F4D1AB00B6ADFC /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
+		3D8FA02F21F4D1AB00B6ADFC /* FormFiewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormFiewController.swift; sourceTree = "<group>"; };
 		3DA722D321F911D300E154DE /* CatFactsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactsModel.swift; sourceTree = "<group>"; };
 		3DA722D521F9140500E154DE /* CatFactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactsViewModel.swift; sourceTree = "<group>"; };
 		3DF1215A21F6476D00D0EF95 /* User+Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Crypto.swift"; sourceTree = "<group>"; };
@@ -108,7 +108,7 @@
 				3D8FA01821F4C2B900B6ADFC /* AppDelegate.swift */,
 				3D8FA01A21F4C2B900B6ADFC /* LoginViewController.swift */,
 				3D8FA02D21F4CC5300B6ADFC /* RegistrationViewController.swift */,
-				3D8FA02F21F4D1AB00B6ADFC /* ViewControllerExtensions.swift */,
+				3D8FA02F21F4D1AB00B6ADFC /* FormFiewController.swift */,
 				3DF8593721F525BA005491EC /* Validation */,
 				3D8FA01C21F4C2B900B6ADFC /* Main.storyboard */,
 				3D8FA02221F4C2BA00B6ADFC /* Assets.xcassets */,
@@ -290,7 +290,7 @@
 				3D8FA02E21F4CC5300B6ADFC /* RegistrationViewController.swift in Sources */,
 				3DF1215B21F6476D00D0EF95 /* User+Crypto.swift in Sources */,
 				3DF8593921F529DD005491EC /* DatabaseValidations.swift in Sources */,
-				3D8FA03021F4D1AB00B6ADFC /* ViewControllerExtensions.swift in Sources */,
+				3D8FA03021F4D1AB00B6ADFC /* FormFiewController.swift in Sources */,
 				3DF8593221F51661005491EC /* DatabaseManager.swift in Sources */,
 				3D8FA01921F4C2B900B6ADFC /* AppDelegate.swift in Sources */,
 				3D3A672021FDE387004B2964 /* SessionManager.swift in Sources */,

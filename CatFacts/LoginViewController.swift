@@ -12,6 +12,7 @@ class LoginViewController: FormFiewController {
 
     @IBOutlet weak var loginField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,6 +24,8 @@ class LoginViewController: FormFiewController {
         
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+
 
     @IBAction func logInButtonPressed(_ sender: UIButton) {
         
