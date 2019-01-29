@@ -14,7 +14,7 @@ class SessionManager {
     static let keychainWrapper = KeychainWrapper.standard
     
     /**
-     Stores user authentication data in Keychain and performs completion action
+     Stores user authorization data in Keychain and performs completion action
      if the operation was successful.
      An example of completion action is navigation to another view (navigate the user
      to main screen after successful authentication.)
@@ -71,8 +71,8 @@ class SessionManager {
     /**
      Removes user authorization data from Keychain and performs completion action
      if the operation was successful.
-     An example of completion action is navigation to the user back to login screen
-     after their authorization data is removed from Keychain.
+     An example of completion action is navigation the user back to login screen
+     after their authorization data is removed from the Keychain.
      
      - Parameters:
        - completion: completion action to be performed if the operation was successful.

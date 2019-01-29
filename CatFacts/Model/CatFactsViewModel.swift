@@ -12,7 +12,7 @@ import UIKit
 class CatFactsViewModel: NSObject {
     
     /**
-     The action that will be called every time when model data is updated.
+     The action which will be called every time when model data is updated.
      Also, the action is called during setting this field.
     */
     var dataUpdatedAction: ((_ rowsAmount: Int) -> ())? {

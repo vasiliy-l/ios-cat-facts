@@ -11,7 +11,7 @@ import UIKit
 
 /**
  Validation helper to apply verification rules and display
- an alert message to a user in case of validation failure.
+ an alert message to the user in case of validation failure.
  */
 class Validator {
     
@@ -25,7 +25,7 @@ class Validator {
     
     /**
      Applies validation rule to an object. If the validation rule fails,
-     an alert with validation description is displayed to a user; also, all subsequent validation calls in the chain
+     an alert with validation description is displayed to the user; also, all subsequent validation calls in the chain
      will be skipped and not applied.
      
      - Parameters:
@@ -54,7 +54,7 @@ class Validator {
     
     /**
      Applies validation rule to objects. If the validation rule fails,
-     an alert with validation description is displayed to a user;
+     an alert with validation description is displayed to the user;
      also, all subsequent validation calls in the chain will be skipped
      and not applied.
      
@@ -86,7 +86,7 @@ class Validator {
     
     /**
      Applies validation rule to objects. If the validation rule fails,
-     an alert with validation description is displayed to a user;
+     an alert with validation description is displayed to the user;
      also, all subsequent validation calls in the chain will be skipped
      and not applied.
      
